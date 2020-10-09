@@ -27,7 +27,7 @@ hbs.registerPartials(partialsPath)
 app.use(express.static(publicDirectoryPath))
 
 app.get('',(req,res)=>{
-  res.render('index',{title:'Home',name:'Dins'})
+  res.render('index',{title:'Home',name:'Din\'s'})
 })
 
 //app.com/weather
@@ -54,25 +54,25 @@ app.get('/weather', async (req,res)=>{
 })
 //app.com/about
 app.get('/about',(req,res)=>{
-  res.render('about',{title:'About',name:'Dins'})
+  res.render('about',{title:'About',name:'Din\'s'})
 })
 
 //app.com/help
 app.get('/help',(req,res)=>{
-  res.render('help',{name:'Dins',title:'Help'})
+  res.render('help',{name:'Din\'s',title:'Help'})
 })
 
 //app.com/help/undefined
 app.get('/help/*',(req,res)=>{
-  res.render('404',{message:'Help article does not exist!',name:'Dins'})
+  res.render('404',{message:'Help article does not exist!',name:'Din\'s'})
 })
 
 //app.com/undefined
 app.get('*',(req,res)=>{
-  res.render('404',{title:'404!',message:'The page you are looking for,Doesn\'t exist please try valid page',name:'Dins'})
+  res.render('404',{title:'404!',message:'The page you are looking for,Doesn\'t exist please try valid page',name:'Din\'s'})
 })
 
 app.listen(port,()=>{
-  console.log(`server is running! @ ${port}`);
+  console.log(`server is running! @ port :${port}`);
   
 })

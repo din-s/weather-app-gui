@@ -26,7 +26,7 @@ const getWeather=(location)=>{
       }
     }).catch((e)=>{
       return {
-        error:'Could fetch weather data'
+        error:'Error : Couldn\'t fetch weather data!'
       }
     })
   
