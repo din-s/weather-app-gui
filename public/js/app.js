@@ -22,7 +22,7 @@ const getWeather =(location)=>{
       if(data.error){
         return resultDOM.innerHTML= `<strong> ${data.error}!!</strong>`
       }
-      resultDOM.innerHTML= `At <strong>${data.location}</strong> it is <strong>${data.forecast}</strong> degrees Outside`
+      resultDOM.innerHTML= `At <strong>${data.location}</strong> it is <strong>${data.forecast}</strong> °C outside.`
       // console.log(data)
     })
   })
