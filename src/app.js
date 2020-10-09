@@ -18,7 +18,7 @@ const publicDirectoryPath = path.join(__dirname, '../public')
 
 
 const app = express()
-
+const port = process.env.PORT || 3000
 //setup HBS 
 app.set('view engine','hbs')
 app.set('views',viewsPath)
@@ -72,7 +72,7 @@ app.get('*',(req,res)=>{
   res.render('404',{title:'404!',message:'The page you are looking for,Doesn\'t exist please try valid page',name:'Dins'})
 })
 
-app.listen(3000,()=>{
-  console.log('server is running!');
+app.listen(port,()=>{
+  console.log(`server is running! @ ${port}`);
   
 })
